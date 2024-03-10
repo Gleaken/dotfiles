@@ -2,5 +2,6 @@
 opacity = 0.85
 [font]
 size = 13.0
+normal = { family = "MesloLGS NF", style = "Regular" }
 [selection]
 save_to_clipboard = true
