@@ -1,0 +1,6 @@
+[window]
+opacity = 0.85
+[font]
+size = 13.0
+[selection]
+save_to_clipboard = true
