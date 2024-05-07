@@ -130,7 +130,7 @@ for i in groups:
 layout_theme = {"border_width": 2,
                 "margin": 8,
                 "padding_x": 6,
-#                "border_focus": colors[8],
+                "border_focus": ["#8a1d84", "#8a1d84"],
 #                "border_normal": colors[0]
                 }
 
@@ -159,8 +159,9 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        wallpaper='/home/janusz/Pictures/skull_and_bones_2018_video_game-wallpaper-3840x1200.jpg',
-        wallpaper_mode='fill',
+        #wallpaper='/home/janusz/Pictures/skull_and_bones_2018_video_game-wallpaper-3840x1200.jpg',
+        #wallpaper_mode='fill',
+        #background='#00000000',
         top=bar.Bar(
             [
                 widget.CurrentLayout(),
