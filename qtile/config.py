@@ -85,6 +85,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     #Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Spawn a command using a prompt widget"),
+    Key([mod], "e", lazy.spawn("thunar"), desc="run file explorer")
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -130,8 +131,9 @@ for i in groups:
 layout_theme = {"border_width": 2,
                 "margin": 8,
                 "padding_x": 6,
-                "border_focus": ["#8a1d84", "#8a1d84"],
-#                "border_normal": colors[0]
+                #"border_focus": ["#8a1d84", "#8a1d84"],
+                "border_focus": ["#1b4ea1", "#1b4ea1"],
+                "border_normal": ["#55585c", "#55585c"]
                 }
 
 layouts = [
@@ -185,6 +187,15 @@ screens = [
 #                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
+                widget.CPU(
+                    foreground = ["#88c0d0","#88c0d0"],
+                        decorations=[
+                            BorderDecoration(
+                                colour = ["#88c0d0","#88c0d0"],
+                                border_width = [0, 0, 2, 0],
+                            )
+                        ],
+                    ),
                 widget.Systray(),
                 widget.PulseVolume(),
                 widget.QuickExit(),
