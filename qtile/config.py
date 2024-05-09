@@ -34,9 +34,12 @@ from libqtile.utils import guess_terminal
 from qtile_extras import widget
 from qtile_extras.widget.decorations import BorderDecoration
 
+my_browser = "brave"
+terminal = "alacritty"
+my_file_explorer = "thumar"
+
 
 mod = "mod4"
-terminal = guess_terminal()
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -85,7 +88,8 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     #Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Spawn a command using a prompt widget"),
-    Key([mod], "e", lazy.spawn("thunar"), desc="run file explorer")
+    Key([mod], "e", lazy.spawn(my_file_explorer), desc="run file explorer"),
+    Key([mod], "b", lazy.spawn(my_browser), desc="run web browser")
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -174,6 +178,8 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+spacer_length = 8
+
 screens = [
     Screen(
         #wallpaper='/home/janusz/Pictures/skull_and_bones_2018_video_game-wallpaper-3840x1200.jpg',
@@ -204,6 +210,7 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.CPU(
+                    mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn('alacritty -e htop')},
                     foreground = ["#88c0d0","#88c0d0"],
                         decorations=[
                             BorderDecoration(
@@ -212,15 +219,37 @@ screens = [
                             )
                         ],
                     ),
+                widget.Spacer(length = spacer_length),
+                widget.PulseVolume(
+                    foreground = "#4DFCE0",
+                    fmt = '🕫  Vol: {}',
+                    mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn('pavucontrol')},
+                    decorations=[
+                        BorderDecoration(
+                            colour = "#4DFCE0",
+                            border_width = [0, 0, 2, 0],
+                        )
+                    ],
+                ),
+                widget.Spacer(length = spacer_length),
+                widget.KeyboardLayout(
+                    foreground = "#EEBBFF",
+                    configured_keyboards = ['pl'],
+                    fmt = '⌨  Kbd: {}',
+                    decorations=[
+                        BorderDecoration(
+                            colour = "#EEBBFF",
+                            border_width = [0, 0, 2, 0],
+                        )
+                    ],
+                ),
+                widget.Spacer(length = spacer_length),
                 widget.Systray(),
-                widget.PulseVolume(),
                 widget.QuickExit(),
             ],
             24,
             margin = 6,
             opacity = 0.6
-#            border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-#            border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
