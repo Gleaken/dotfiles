@@ -102,7 +102,21 @@ for vt in range(1, 8):
     )
 
 
-groups = [Group(i) for i in "123456789"]
+
+#groups[1]['matches'] = [Match(wm_class=["Slack","telegram-desktop"])]
+
+groups = [
+    Group("1"),
+    Group("2", matches=[Match(wm_class=["Slack","telegram-desktop"])]),
+    Group("3"),
+    Group("4"),
+    Group("5"),
+    Group("6"),
+    Group("7"),
+    Group("8"),
+    Group("9"),
+    Group("0")
+]
 
 for i in groups:
     keys.extend(
@@ -128,7 +142,7 @@ for i in groups:
         ]
     )
 
-layout_theme = {"border_width": 2,
+layout_theme = {"border_width": 3,
                 "margin": 8,
                 "padding_x": 6,
                 #"border_focus": ["#8a1d84", "#8a1d84"],
