@@ -27,7 +27,7 @@
 import os
 import subprocess
 from libqtile import bar, extension, hook, layout, qtile, widget
-from libqtile.config import Click, Drag, Group, Key, KeyChord, Match, Screen
+from libqtile.config import Click, Drag, Group, Key, KeyChord, Match, Screen, ScratchPad, DropDown
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
@@ -120,8 +120,11 @@ groups = [
     Group("7", layout="monadtall"),
     Group("8", layout="monadtall"),
     Group("9", layout="monadtall"),
-    Group("0", layout="monadtall")
+    ScratchPad("0", [
+        DropDown("term", terminal, opacity=0.8, on_focus_lost_hide = True, warp_pointer = True)]),
 ]
+
+keys.extend([Key([],'F11', lazy.group["0"].dropdown_toggle('term'))])
 
 for i in groups:
     keys.extend(
@@ -188,11 +191,15 @@ screens = [
         #background='#00000000',
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.CurrentLayoutIcon(),
+                widget.Image(
+                     filename = "~/.config/qtile/arch_icon.png",
+                     scale = "False",
+                     mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(terminal)},
+                ),
                 widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
+                widget.CurrentLayout(foreground = "#FBEAFF"),
+                widget.CurrentLayoutIcon(foreground = "#FBEAFF"),
+                widget.WindowName(max_chars = 40),
                 widget.Spacer(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 widget.Sep(),
