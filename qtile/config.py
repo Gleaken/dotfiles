@@ -106,16 +106,16 @@ for vt in range(1, 8):
 #groups[1]['matches'] = [Match(wm_class=["Slack","telegram-desktop"])]
 
 groups = [
-    Group("1"),
-    Group("2", matches=[Match(wm_class=["Slack","telegram-desktop"])]),
-    Group("3"),
-    Group("4"),
-    Group("5"),
-    Group("6"),
-    Group("7"),
-    Group("8"),
-    Group("9"),
-    Group("0")
+    Group("1", layout="monadtall"),
+    Group("2", layout="monadtall", matches=[Match(wm_class=["Slack","telegram-desktop"])]),
+    Group("3", layout="monadtall"),
+    Group("4", layout="monadtall"),
+    Group("5", layout="monadtall"),
+    Group("6", layout="monadtall"),
+    Group("7", layout="monadtall"),
+    Group("8", layout="monadtall"),
+    Group("9", layout="monadtall"),
+    Group("0", layout="monadtall")
 ]
 
 for i in groups:
@@ -142,9 +142,9 @@ for i in groups:
         ]
     )
 
-layout_theme = {"border_width": 3,
+layout_theme = {"border_width": 4,
                 "margin": 8,
-                "padding_x": 6,
+                "padding_x": 2,
                 #"border_focus": ["#8a1d84", "#8a1d84"],
                 "border_focus": ["#1b4ea1", "#1b4ea1"],
                 "border_normal": ["#55585c", "#55585c"]
@@ -155,9 +155,10 @@ layouts = [
     #layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
+    layout.Bsp(**layout_theme),
     # layout.Matrix(),
     layout.MonadTall(**layout_theme),
+    layout.MonadThreeCol(**layout_theme),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
@@ -181,6 +182,7 @@ screens = [
         top=bar.Bar(
             [
                 widget.CurrentLayout(),
+                widget.CurrentLayoutIcon(),
                 widget.GroupBox(),
                 widget.Prompt(),
                 widget.WindowName(),
@@ -215,6 +217,8 @@ screens = [
                 widget.QuickExit(),
             ],
             24,
+            margin = 6,
+            opacity = 0.6
 #            border_width=[2, 0, 2, 0],  # Draw top and bottom borders
 #            border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
