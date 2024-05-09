@@ -36,7 +36,7 @@ from qtile_extras.widget.decorations import BorderDecoration
 
 my_browser = "brave"
 terminal = "alacritty"
-my_file_explorer = "thumar"
+my_file_explorer = "thunar"
 
 
 mod = "mod4"
@@ -89,7 +89,8 @@ keys = [
     #Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Spawn a command using a prompt widget"),
     Key([mod], "e", lazy.spawn(my_file_explorer), desc="run file explorer"),
-    Key([mod], "b", lazy.spawn(my_browser), desc="run web browser")
+    Key([mod], "b", lazy.spawn(my_browser), desc="run web browser"),
+    Key([mod], "w", lazy.spawn("/home/janusz/wallpaper.sh" ), desc="randomly change wallpaper")
 ]
 
 # Add key bindings to switch VTs in Wayland.
