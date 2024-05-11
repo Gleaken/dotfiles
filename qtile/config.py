@@ -252,6 +252,17 @@ screens = [
                     ],
                 ),
                 widget.Spacer(length = spacer_length),
+                widget.CheckUpdates(
+                    no_update_string='No updates',
+                    foreground = "#C4FCF0",
+                    decorations=[
+                        BorderDecoration(
+                            colour = "#C4FCF0",
+                            border_width = [0, 0, 2, 0],
+                        )
+                    ],
+                ),
+                widget.Spacer(length = spacer_length),
                 widget.Systray(),
                 widget.QuickExit(),
             ],
