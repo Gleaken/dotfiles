@@ -262,6 +262,7 @@ screens = [
                             border_width = [0, 0, 2, 0],
                         )
                     ],
+                    execute = "alacritty -e yay -Syu",
                 ),
                 widget.Spacer(length = spacer_length),
                 widget.Systray(),
