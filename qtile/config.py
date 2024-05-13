@@ -151,8 +151,8 @@ for i in groups:
     )
 
 layout_theme = {"border_width": 4,
-                "margin": 8,
-                "padding_x": 2,
+                "margin": 20,
+                "padding_x": 60,
                 #"border_focus": ["#8a1d84", "#8a1d84"],
                 "border_focus": ["#1b4ea1", "#1b4ea1"],
                 "border_normal": ["#55585c", "#55585c"]
@@ -255,6 +255,7 @@ screens = [
                 widget.CheckUpdates(
                     no_update_string='No updates',
                     foreground = "#C4FCF0",
+                    distro = "Arch_yay",
                     decorations=[
                         BorderDecoration(
                             colour = "#C4FCF0",
