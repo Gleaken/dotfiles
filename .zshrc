@@ -59,6 +59,7 @@ bindkey -e
 
 #Aliases
 alias ls='ls --color'
+alias vi='nvim'
 
 # Shell integrations
 eval "$(fzf --zsh)"
