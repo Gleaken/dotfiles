@@ -1,2 +1,5 @@
+[default]
+sorting = "random"
+
 [DP-2]
 path = "/home/janusz/Pictures/wallpapers"
