@@ -186,9 +186,8 @@ spacer_length = 8
 
 screens = [
     Screen(
-        #wallpaper='/home/janusz/Pictures/skull_and_bones_2018_video_game-wallpaper-3840x1200.jpg',
+        wallpaper='/home/janusz/Pictures/wallpapers/skull_and_bones_2018_video_game-wallpaper-3840x1200.jpg',
         #wallpaper_mode='fill',
-        #background='#00000000',
         top=bar.Bar(
             [
                 widget.Image(
@@ -270,7 +269,8 @@ screens = [
             ],
             24,
             margin = 6,
-            opacity = 0.6
+            background='#00000000',
+            opacity = 1
         ),
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling

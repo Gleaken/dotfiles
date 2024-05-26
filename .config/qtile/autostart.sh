@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 #xrandr --rate 120
-wlr-randr --output DP-2 --mode 3840x1200@120
+wlr-randr --output DP-2 --mode 3840x1200@120 &
 lxsession &
 #picom --daemon --config ~/.config/picom/picom.conf &
 #xwallpaper --stretch /home/janusz/Pictures/skull_and_bones_2018_video_game-wallpaper-3840x1200.jpg &
