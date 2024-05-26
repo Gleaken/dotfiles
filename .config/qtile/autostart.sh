@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 #
-xrandr --rate 120
+#xrandr --rate 120
+wlr-randr --output DP-2 --mode 3840x1200@120
 lxsession &
-picom --daemon --config ~/.config/picom/picom.conf &
+#picom --daemon --config ~/.config/picom/picom.conf &
 #xwallpaper --stretch /home/janusz/Pictures/skull_and_bones_2018_video_game-wallpaper-3840x1200.jpg &
-find ~/Pictures/wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch &
+#find ~/Pictures/wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch &
 setxkbmap -layout pl &
 dunst -config ~/.config/dunst/dunstrc &
 #insync start &
