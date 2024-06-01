@@ -21,11 +21,12 @@ set $term alacritty
 set $menu dmenu_path | wofi | xargs swaymsg exec --
 set $runapp wofi --show drun
 set $browser brave
+set $tmux alacritty -e 'tmux new -A'
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
@@ -218,5 +219,23 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
+
+# windows
+default_border none
+default_floating_border none
+titlebar_padding 1
+titlebar_border_thickness 0
+gaps inner 10
+
+# startup appd
+exec swaymsg "workspace 1; exec brave;"
+exec swaymsg "workspace 1; exec $tmux;"
+exec swaymsg "workspace 2;"
+exec swaymsg "workspace 2; exec slack;"
+exec swaymsg "workspace 2; exec telegram-desktop;"
+exec swaymsg "workspace 1;"
+exec insync start
+exec keepassxc
+exec wpaperd -d
 
 include /etc/sway/config.d/*

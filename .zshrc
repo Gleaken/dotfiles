@@ -66,3 +66,7 @@ eval "$(fzf --zsh)"
 
 #PATH
 export PATH="$PATH:/home/janusz/.local/share/JetBrains/Toolbox/scripts:/home/janusz/.dotnet:/home/janusz/bin"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
