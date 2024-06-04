@@ -43,6 +43,9 @@ set $tmux alacritty -e 'tmux new -A'
 #          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 #          before-sleep 'swaylock -f -c 000000'
 #
+exec swayidle -w \
+          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' 
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -57,6 +60,10 @@ set $tmux alacritty -e 'tmux new -A'
 #       natural_scroll enabled
 #       middle_emulation enabled
 #   }
+
+input type:keyboard {
+   xkb_layout pl
+}
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -76,6 +83,7 @@ set $tmux alacritty -e 'tmux new -A'
 
     bindsym $mod+r exec $runapp
     bindsym $mod+Shift+b exec $browser
+    bindsym $mod+Shift+w exec wpaperctl next
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
