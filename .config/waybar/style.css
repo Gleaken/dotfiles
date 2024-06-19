@@ -64,20 +64,37 @@ window#waybar.solo {
 /*    min-width: 30px;*/
 }
 
+#workspaces {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 1.0);
+    margin: 5px 6px 0px 20px;
+    padding: 0px 15px 0px 15px;
+    border-bottom: 2px solid rgba(50, 50, 50, 1.0);
+    border-top: 2px solid rgba(150, 150, 150, 1.0);
+}
+
+#tray {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 1.0);
+    margin: 5px 16px 0px 20px;
+    padding: 0px 15px 0px 15px;
+    border-bottom: 2px solid rgba(50, 50, 50, 1.0);
+    border-top: 2px solid rgba(150, 150, 150, 1.0);
+}
+
 #custom-zypper,
-#workspaces,
 #memory, 
 #network, 
 #pulseaudio, 
-#tray,
 #cpu, 
 #clock {
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 1.0);
     margin: 5px 6px 0px 10px;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 15px 0px 15px;
     border-bottom: 2px solid rgba(50, 50, 50, 1.0);
     border-top: 2px solid rgba(150, 150, 150, 1.0);
+    min-width: 50px;
 }
 
 
