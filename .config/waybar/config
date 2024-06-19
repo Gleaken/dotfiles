@@ -5,12 +5,9 @@
     // "width": 1280, // Waybar width
     // "gtk-layer-shell": "false",
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "custom/scratchpad", "sway/mode", "hyprland/window", "hyprland/submap"],
+    "modules-left": ["hyprland/workspaces", "custom/scratchpad", "hyprland/window", "hyprland/submap"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/zypper", "network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "pulseaudio", "custom/layout","tray"],
-    "sway/mode": {
-        "format": " {}"
-    },
+    "modules-right": ["custom/zypper", "network", "cpu", "memory", "pulseaudio", "tray"],
     "hyprland/submap": {
         "format": "✌️ {}",
         "max-length": 8,
@@ -25,7 +22,7 @@
         "on-scroll-down": "hyprctl dispatch workspace e-1",
         "all-outputs": true,
         "on-click": "activate",
-	 "persistent_workspaces":{
+	 "persistent-workspaces":{
              "1": "",
              "2": "",
              "3": [],
@@ -104,26 +101,6 @@
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", ""]
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}",
-        "format-charging": "",
-        "format-plugged": "",
-        "format-alt": "{capacity}% {time}",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
