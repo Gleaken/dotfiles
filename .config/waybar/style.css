@@ -10,14 +10,18 @@
 
 window#waybar {
     color: rgba(53, 185, 171, 1);
-    background-color: rgba(23, 63, 79, 0.4);
-    border-bottom: 2px solid rgba(53, 185, 171, 0.4);
+    background-color: rgba(23, 63, 79, 0.0);
+    border-bottom: 2px solid rgba(53, 185, 171, 0.0);
 }
 
 #window {
     border-radius: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 1.0);
+    margin: 5px 6px 0px 10px;
+    padding: 0px 10px 0px 20px;
+    min-width: 230px;
+    border-bottom: 2px solid rgba(50, 50, 50, 1.0);
+    border-top: 2px solid rgba(150, 150, 150, 1.0);
 }
 
 #submap {
@@ -26,10 +30,6 @@ window#waybar {
 
 window#waybar.solo {
     color: rgba(53, 185, 171, 1);
-}
-
-#workspaces {
-    margin: 0 5px;
 }
 
 #custom-scratchpad {
@@ -56,10 +56,6 @@ window#waybar.solo {
 
 #mode, 
 #battery, 
-#cpu, 
-#memory, 
-#network, 
-#pulseaudio, 
 #idle_inhibitor, 
 #temperature,
 #custom-layout,
@@ -68,19 +64,20 @@ window#waybar.solo {
 /*    min-width: 30px;*/
 }
 
+#custom-zypper,
+#workspaces,
+#memory, 
+#network, 
+#pulseaudio, 
+#tray,
+#cpu, 
 #clock {
-    margin: 0px 6px 0px 10px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 1.0);
+    margin: 5px 6px 0px 10px;
+    padding: 0px 10px 0px 10px;
+    border-bottom: 2px solid rgba(50, 50, 50, 1.0);
+    border-top: 2px solid rgba(150, 150, 150, 1.0);
 }
 
-#battery.warning {
-   color: rgba(255, 210, 4, 1);
-}
-
-#battery.critical {
-    color: rgba(238, 46, 36, 1);
-}
-
-#battery.charging {
-    color: rgba(217, 216, 216, 1);
-}
 
