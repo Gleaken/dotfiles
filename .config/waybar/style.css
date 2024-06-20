@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-    color: rgba(200, 200, 200, 1);
+    color: rgba(170, 170, 170, 1);
     background-color: rgba(23, 63, 79, 0.0);
     border-bottom: 2px solid rgba(53, 185, 171, 0.0);
 }
@@ -39,15 +39,15 @@ window#waybar.solo {
 
 #workspaces button {
     padding: 0 5px;
-    color: rgba(20, 20, 171, 1);
+    color: rgba(100, 100, 100, 1);
 }
 
 #workspaces button.active {
-    color: rgba(100, 100, 255, 1);
+    color: rgba(180, 4, 180, 1);
 }
 
 #workspaces button.visible {
-    color: rgba(160, 160, 255, 1);
+    color: rgba(170, 85, 255, 1);
 }
 
 #workspaces button.urgent {
