@@ -29,7 +29,7 @@ window#waybar {
 }
 
 window#waybar.solo {
-    color: rgba(53, 185, 171, 1);
+    color: rgba(170, 170, 170, 1);
 }
 
 #custom-scratchpad {
@@ -47,7 +47,7 @@ window#waybar.solo {
 }
 
 #workspaces button.visible {
-    color: rgba(170, 85, 255, 1);
+    color: rgba(100, 100, 100, 1);
 }
 
 #workspaces button.urgent {
