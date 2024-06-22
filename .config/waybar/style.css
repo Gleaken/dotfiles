@@ -47,7 +47,7 @@ window#waybar.solo {
 }
 
 #workspaces button.visible {
-    color: rgba(100, 100, 100, 1);
+    color: rgba(170, 85, 255, 1);
 }
 
 #workspaces button.urgent {
