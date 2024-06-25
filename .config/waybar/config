@@ -89,7 +89,7 @@
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false,
-        "on-click": "exec alacritty -e htop"
+        "on-click": "exec alacritty -e btop"
     },
     "memory": {
         "format": "{}% "
