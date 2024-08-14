@@ -97,4 +97,8 @@ window#waybar.solo {
     min-width: 50px;
 }
 
+#image {
+   margin: 5px 0px 0px 10px;
+}
+
 

@@ -1,17 +1,22 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
+    "height": 33, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // "gtk-layer-shell": "false",
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "custom/scratchpad", "hyprland/window", "hyprland/submap"],
+    "modules-left": ["image#album-art", "hyprland/workspaces", "custom/scratchpad", "hyprland/window", "hyprland/submap"],
     "modules-center": ["clock"],
     "modules-right": ["custom/zypper", "network", "cpu", "memory", "pulseaudio", "tray"],
     "hyprland/submap": {
         "format": "✌️ {}",
         "max-length": 8,
         "tooltip": false
+    },
+    "image#album-art": {
+      "path": "/home/janusz/.config/waybar/archlinux.png",
+      "size": 22,
+      "on-click": "exec wofi --show drun"
     },
     "hyprland/window": {
         "format": " {}",
