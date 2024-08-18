@@ -131,7 +131,7 @@
         },
         "scroll-step": 10,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-click-right": "pavucontrol",
+        "on-click-right": "pwvucontrol",
         "tooltip": false
     },
     "custom/scratchpad": {
