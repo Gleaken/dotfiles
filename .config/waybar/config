@@ -80,7 +80,7 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
+//        "timezone": "Europe/Poland/Warsaw",
         "format": " {:%b %d %Y %R}",
         "tooltip-format": "<span color='#35b9ab'><big>{:%Y %B}</big></span>\n<span color='#35b9ab'><tt><small>{calendar}</small></tt></span>",
         "today-format": "<span color='#21a4df'><b><u>{}</u></b></span>",
@@ -88,8 +88,8 @@
         "format-calendar": "<span background='#173f4f' bgalpha='60%'><b>{}</b></span>",
         "format-calendar-weeks": "<span color='#73ba25'><b>{}</b></span>",
         "format-calendar-weekdays": "<span color='#21a4df'><b>{}</b></span>",
-        "interval": 10,
-        "on-click": "exec merkuro-calendar"
+        "interval": 10
+        //"on-click": "exec merkuro-calendar"
     },
     "cpu": {
         "format": "{usage}% ",
