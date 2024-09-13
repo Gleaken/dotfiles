@@ -33,7 +33,7 @@
     alternate-active-foreground: var(blue);
 }
 element {
-    padding: 1px ;
+    padding: 2px ;
     cursor:  pointer;
     spacing: 5px ;
     border:  0;
