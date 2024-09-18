@@ -70,6 +70,7 @@ export PATH="$PATH:/home/janusz/.local/share/JetBrains/Toolbox/scripts:/home/jan
 export PATH="$PATH:/home/janusz/.dotnet/tools"
 export EDITOR=nvim
 export SA_PASSWORD="Strong_)Pass"
+export DOTNET_ROOT=$HOME/.dotnet
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
