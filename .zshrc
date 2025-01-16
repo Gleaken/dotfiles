@@ -73,5 +73,5 @@ export SA_PASSWORD="Strong_)Pass"
 export DOTNET_ROOT=$HOME/.dotnet
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+#source <(ng completion script)
 
