@@ -68,6 +68,7 @@ eval "$(fzf --zsh)"
 #PATH
 export PATH="$PATH:/home/janusz/.local/share/JetBrains/Toolbox/scripts:/home/janusz/.dotnet:/home/janusz/bin"
 export PATH="$PATH:/home/janusz/.dotnet/tools"
+export PATH="$PATH:/home/janusz/.config/scripts"
 export EDITOR=nvim
 export SA_PASSWORD="Strong_)Pass"
 export DOTNET_ROOT=$HOME/.dotnet
