@@ -1,3 +1,5 @@
+spawn-sh-at-startup "qs -c noctalia-shell"
+spawn-sh-at-startup "/usr/lib/mate-polkit/polkit-mate-authenticatio-agent-1"
 prefer-no-csd
 
 input {
@@ -148,17 +150,6 @@ layout {
         // bottom 64
     }
 }
-
-// Add lines like this to spawn processes at startup.
-// Note that running niri as a session supports xdg-desktop-autostart,
-// which may be more convenient to use.
-// See the binds section below for more spawn examples.
-
-// This line starts waybar, a commonly used bar for Wayland compositors.
-//spawn-at-startup "waybar"
-
-// To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
-spawn-sh-at-startup "qs -c noctalia-shell"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
@@ -429,7 +420,6 @@ binds {
     // Consume one window from the right to the bottom of the focused column.
     Mod+Comma  { consume-window-into-column; }
     // Expel the bottom window from the focused column to the right.
-    Mod+Period { expel-window-from-column; }
 
     Mod+Shift+R { switch-preset-column-width; }
     // Cycling through the presets in reverse order is also possible.
