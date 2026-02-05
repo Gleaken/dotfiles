@@ -240,7 +240,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: kitty with tmux" { spawn-sh "kitty fish -c tmux"; }
-    Mod+Shift+T hotkey-overlay-title="Open a Terminal: kitty" { spawn-sh "kitty"; }
+    Mod+Shift+T hotkey-overlay-title="Open a Terminal: kitty" { spawn-sh "kitty --detach=yes"; }
     //Mod+R hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
     Mod+R hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; } 
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
