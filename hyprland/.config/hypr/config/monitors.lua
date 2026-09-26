@@ -9,7 +9,7 @@
 
 hl.monitor({
     output    = MONITOR1,
-    mode      = "preferred",
+    mode      = "3840x1200@120",
     position  = "auto",
     scale     = "auto",
 })

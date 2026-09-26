@@ -47,8 +47,10 @@ hl.window_rule({
 
 -- Apps
 hl.window_rule({ match = { class = "^(.*\\.exe)$", float = true }, monitor = PRIMARY_MONITOR, center = true, fullscreen_state = 0 })
-hl.window_rule({ match = { class = "^(thunar)$", float = false }, monitor = PRIMARY_MONITOR, fullscreen_state = 0 })
+--hl.window_rule({ match = { class = "^(thunar)$", float = false}, monitor = PRIMARY_MONITOR, fullscreen_state = 0 })
+hl.window_rule({ match = { class = "^(.*kitty-note.*)$" }, float = true, monitor = PRIMARY_MONITOR, center = true, size = {"monitor_w*0.50", "monitor_h*0.60"} })
 hl.window_rule({ match = { class = "^(.*[Ll]auncher.*)$" }, float = true, monitor = PRIMARY_MONITOR })
+hl.window_rule({ match = { class = "^(.*keepassxc.*)$" }, float = true, center = true, monitor = PRIMARY_MONITOR })
 hl.window_rule({ match = { class = "^(vesktop|discord)$" }, monitor = PRIMARY_MONITOR })
 hl.window_rule({ match = { class = "^(.*[Cc]alc.*)$" }, float = true, size = { "max(monitor_w, monitor_h)*0.17", "min(monitor_w, monitor_h)*0.43" } })
 hl.window_rule({ match = { class = "^(org\\.kde\\.keditfiletype)$" }, float = true })
@@ -69,7 +71,7 @@ hl.window_rule({
 })
 
 -- Opacity Overrides
-local terminals = "^(kitty|ghostty|[Kk]onsole|Alacritty|gnome-terminal|xfce[0-9]?-terminal)$"
+local erminals = "^(kitty|ghostty|[Kk]onsole|Alacritty|gnome-terminal|xfce[0-9]?-terminal)$"
 
 hl.window_rule({ match = { class = "^(firefox|zen)$" }, opacity = "1.0 override" })
 hl.window_rule({ match = { class = terminals }, opacity = "1.0 override" }) -- Override opacity in favor of terminal settings for opacity. If your terminal doesn't support transparency, you can remove this rule.
