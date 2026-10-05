@@ -5,8 +5,8 @@ FILE_MANAGER = "thunar"
 BROWSER      = "firefox"
 EDITOR       = "gnome-text-editor --new-window"
 CALCULATOR   = "gnome-calculator"
-LAUNCHER     = "hyprlauncher"
 LAUNCHER     = "~/.config/rofi/launchers/type-4/launcher.sh"
+POWERMENU    = "~/.config/rofi/scripts/powermenu_t1"
 
 -- Monitors
 MONITOR1 = ""

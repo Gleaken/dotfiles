@@ -3,10 +3,12 @@
 
 hl.on("hyprland.start", function ()
     hl.exec_cmd("dbus-update-activation-environment --systemd --all")
-    --hl.exec_cmd("noctalia")
+    hl.exec_cmd("qs -p /home/janusz/projects/quickshell/gleakbar/shell.qml")
     hl.exec_cmd("xhost +SI:localuser:root")
     hl.exec_cmd("jetbrains-toolbox")
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
     hl.exec_cmd("awww-daemon")
     hl.exec_cmd("dunst")
+    hl.exec_cmd("udiskie")
+    hl.exec_cmd("ckb-next -b")
 end)
